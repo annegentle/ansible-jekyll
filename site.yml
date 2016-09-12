@@ -1,6 +1,6 @@
 ---
 - hosts: jekyll
-  remote_user: ubuntu
+  remote_user: cloud-user
   become: yes
   become_method: sudo
   roles:
