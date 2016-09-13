@@ -10,10 +10,10 @@
 - name: Copy post-receive hook
   template: src=post-receive dest=/home/{{git_user}}/{{git_repo_dir}}/{{git_repo}}/hooks/post-receive
   sudo: yes
-  sudo_user: {{git_user}}
+  sudo_user: "{{git_user}}"
   args:
-    owner: {{git_user}}
-    group: {{git_user}}
+    owner: "{{git_user}}"
+    group: "{{git_user}}"
     mode: 0755
 #- name: read-write git checkout from repo
 #  become_user: "{{ git_user }}"
