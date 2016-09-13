@@ -2,7 +2,7 @@
 - name: Install git
   action: apt pkg=git-core state=installed
 - name: Create git repo directory
-  file: path=/home/{{git_user}}/{{git_repo_dir}}/{{git_repo}} owner=git group=git mode=0755 state=directory
+  file: path=/home/{{git_user}}/{{git_repo_dir}}/{{git_repo}} owner="{{git_user}}" group="{{git_user}}" mode=0755 state=directory
 - name: Initialize bare git repo
   command: git init --bare chdir=/home/{{git_user}}/{{git_repo_dir}}/{{git_repo}}
   sudo: yes
