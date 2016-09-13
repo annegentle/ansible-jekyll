@@ -5,12 +5,12 @@
   file: path=/home/{{git_user}}/{{git_repo_dir}}/{{git_repo}} owner="{{git_user}}" group="{{git_user}}" mode=0755 state=directory
 - name: Initialize bare git repo
   command: git init --bare chdir=/home/{{git_user}}/{{git_repo_dir}}/{{git_repo}}
-  sudo: yes
-  sudo_user: git
+  become: yes
+  become_user: "{{git_user}}"
 - name: Copy post-receive hook
   template: src=post-receive dest=/home/{{git_user}}/{{git_repo_dir}}/{{git_repo}}/hooks/post-receive
-  sudo: yes
-  sudo_user: "{{git_user}}"
+  become: yes
+  become_user: "{{git_user}}"
   args:
     owner: "{{git_user}}"
     group: "{{git_user}}"
