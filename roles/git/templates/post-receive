@@ -5,6 +5,7 @@ PUBLIC_WWW={{http_root}}
 
 git clone $GIT_REPO $TMP_GIT_CLONE
 cd $TMP_GIT_CLONE
+bundle install
 jekyll build --source $TMP_GIT_CLONE --destination $PUBLIC_WWW
 rm -Rf $TMP_GIT_CLONE
 exit
