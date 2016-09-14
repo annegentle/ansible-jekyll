@@ -17,6 +17,13 @@ To make this work with a given OpenStack cloud, you must set the group_vars/jeky
 Then, to deploy a Jekyll site to your new server:
 
 ```bash
-git remote add prod git@example.org:repos/example-repo.git
+git remote add prod user@example.org:repos/example-repo.git
 git push prod master
+```
+
+For example:
+
+```
+git remote add jekyll-staging cloud-user@173.39.237.137:repos/summit-example
+git push jekyll-staging master
 ```
