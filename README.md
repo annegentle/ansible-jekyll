@@ -12,11 +12,7 @@ First, copy the group_vars/jekyll.yml to a local group_vars/jekyll.yml file and 
 ansible-playbook site.yml
 ```
 
-Use a private key if needed:
-
-```bash
-ansible-playbook --private-key ~/.ssh/test-deploy.pem site.yml
-```
+To make this work with a given OpenStack cloud, you must set the group_vars/jekyll.yml file to have the name of the remote user (cloud-user or cloud, for example) and you must have your public key loaded as a keypair to the cloud so that you can clone git repositories.
 
 Then, to deploy a Jekyll site to your new server:
 
