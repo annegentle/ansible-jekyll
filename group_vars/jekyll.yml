@@ -8,7 +8,7 @@ jekyll_version: 3.0.5
 ruby_version: 2.3.1
 
 server_hostname: $hostname
-git_branch: cloud
+git_branch: master
 git_user_key: "{{ lookup('file', '~/.ssh/id_rsa') }}"
 
 # These two will form the path for the git remote:
